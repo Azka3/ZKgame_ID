@@ -16,19 +16,23 @@ body {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 15px 10px;
 }
 
 nav ul {
     list-style: none;
     text-align: center;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: block;
+    margin: 10px 0;
 }
 
 nav ul li a {
@@ -45,7 +49,7 @@ nav ul li a:hover {
 main {
     height: 100%;
     margin: 20px auto;
-    padding: 20px;
+    padding: 15px;
     flex: 1;
 }
 
@@ -61,6 +65,7 @@ article {
 .featured-img {
     width: 600px;
     height: auto;
+    max-height: 100%;
     margin-bottom: 15px;
 }
 
@@ -101,4 +106,11 @@ main > * {
     color: #555;         /* Warna teks watermark */
     opacity: 0.8;        /* Transparansi */
     pointer-events: none; /* Agar tidak mengganggu interaksi dengan elemen lain */
+}
+
+@media (min-width: 768px) {
+    nav ul li {
+        display: inline;  /* Kembali ke horizontal untuk layar lebih besar */
+        margin: 0 15px;
+    }
 }
