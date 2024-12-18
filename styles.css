@@ -92,9 +92,13 @@ main > * {
     margin: 0;
 }
 
-.zk {
-    text-align: left;
-    list-style-type: none;
-    height: 7px;
-    padding: 10px;
+.watermark {
+    position: absolute;  /* Tetap di dalam header */
+    top: 10px;           /* Jarak dari atas */
+    left: 10px;          /* Jarak dari kiri */
+    font-size: 20px;     /* Ukuran font watermark */
+    font-weight: bold;   /* Membuat teks lebih tebal */
+    color: #555;         /* Warna teks watermark */
+    opacity: 0.8;        /* Transparansi */
+    pointer-events: none; /* Agar tidak mengganggu interaksi dengan elemen lain */
 }
